@@ -1,0 +1,36 @@
+{
+  "name": "public-holidays",
+  "version": "0.0.1",
+  "description": "Public holidays by country. Readonly from google calendar.",
+  "main": "./lib/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha -t 8000"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mitica/public-holidays-js.git"
+  },
+  "keywords": [
+    "holidays",
+    "google",
+    "calendar"
+  ],
+  "author": "Dumitru Cantea",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mitica/public-holidays-js/issues"
+  },
+  "homepage": "https://github.com/Mitica/public-holidays-js#readme",
+  "dependencies": {
+    "ical": "^0.5.0"
+  },
+  "devDependencies": {
+    "mocha": "^3.1.2"
+  }
+}
