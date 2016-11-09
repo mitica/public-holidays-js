@@ -3,9 +3,6 @@
   "version": "0.0.1",
   "description": "Public holidays by country. Readonly from google calendar.",
   "main": "./lib/index.js",
-  "directories": {
-    "test": "test"
-  },
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha -t 8000"
   },
