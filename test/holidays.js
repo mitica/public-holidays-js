@@ -12,8 +12,8 @@ describe('holidays', () => {
 		holidays({ country: 'md', lang: 'ro' }, done);
 	});
 
-	it('should throw error for unsupported locale us:ro', (done) => {
-		holidays({ country: 'us', lang: 'ro' }, (error) => {
+	it('should throw error for unsupported locale sua:ro', (done) => {
+		holidays({ country: 'sua', lang: 'ro' }, (error) => {
 			assert.ok(error);
 			assert.equal(error.statusCode, 404);
 			done();
