@@ -33,10 +33,10 @@ Get public holidays by filter.
 
 #### filter:
 
-- **country** (required) - country 2 letters code: `us`, `ru`
-- **lang** (required) - language 2 letters code: `en`, `ru`
-- **start** (optional) - start date
-- **end** (optional) - end date
+- **country** (string) (required) - country 2 letters code: `us`, `ru`
+- **lang** (string) (required) - language 2 letters code: `en`, `ru`
+- **start** (int) (optional) - start date: milliseconds
+- **end** (int) (optional) - end date: milliseconds
 
 #### options
 
