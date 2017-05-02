@@ -3,7 +3,6 @@
   "au": "australian",
   "br": "brazilian",
   "bg": "bulgarian",
-  "br": "brazilian",
   "ca": "canadian",
   "cn": "china",
   "cz": "czech",
@@ -45,5 +44,6 @@
   "tw": "taiwan",
   "ua": "ukrainian",
   "us": "usa",
-  "vn": "vietnamese"
+  "vn": "vietnamese",
+  "za": "sa"
 }

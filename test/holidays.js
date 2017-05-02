@@ -21,7 +21,7 @@ describe('holidays', () => {
 	});
 
 	it('should throw a timeout error', (done) => {
-		holidays({ country: 'us', lang: 'ro' }, {timeout: 10}, (error) => {
+		holidays({ country: 'us', lang: 'ro' }, { timeout: 10 }, (error) => {
 			assert.ok(error);
 			assert.equal(error.code, 'ETIMEDOUT');
 			done();
@@ -31,8 +31,26 @@ describe('holidays', () => {
 	it('should filter holidays by end date', (done) => {
 		const end = new Date();
 		holidays({ country: 'ro', lang: 'ro', end: end.getTime() }, (error, result) => {
-			// assert.equal(0, result.length);
-			// assert.equal(true, result[result.length - 1].start > result[0].start);
+			assert.ok(result.length);
+			end.setMonth(end.getMonth() + 6);
+			holidays({ country: 'ro', lang: 'ro', end: end.getTime() }, (error2, result2) => {
+				assert.ok(result2.length);
+				assert.equal(true, result2.length > result.length);
+				done(error);
+			});
+		});
+	});
+
+	it('should get holidays za->sa (South African -> sa code!)', (done) => {
+		holidays({ country: 'za', lang: 'en' }, (error, result) => {
+			assert.ok(result.length);
+			done(error);
+		});
+	});
+
+	it('should get holidays sa->saudiarabian', (done) => {
+		holidays({ country: 'sa', lang: 'en' }, (error, result) => {
+			assert.ok(result.length);
 			done(error);
 		});
 	});
