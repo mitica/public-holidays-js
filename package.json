@@ -1,6 +1,6 @@
 {
   "name": "public-holidays",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Public holidays by country. Readonly from google calendar.",
   "main": "./dist/index.js",
   "types": "./types/index.d.ts",
