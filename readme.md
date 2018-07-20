@@ -4,42 +4,44 @@ Gets public holidays from google calendar.
 
 
 ## Usage
-```
-const holidays = require('public-holidays');
+```ts
+import { getHolidays } from 'public-holidays';
 // public holidays for US in English
-const filter = {country: 'us', lang: 'en'};
+const options = { country: 'us', lang: 'en' };
 
-holidays(filter, (error, result) => {
-  
-});
-
-// public holidays for FR in French
-filter = {country: 'fr', lang: 'fr'};
-
-holidays(filter, (error, result) => {
-  
-});
+const holidays = await getHolidays(options);
 ```
 
-## API
+## API (v0.2)
 
-### holidays.url(country, lang)
+### formatCalendarUrl(country, lang): string
 
 Format google calendar url by country and language.
 
-### (filter, options, callback)
+### getHolidays(options): Promise<Holiday[]>
 
-Get public holidays by filter.
+Get public holidays by options.
 
-#### filter:
+#### options:
 
 - **country** (string) (required) - country 2 letters code: `us`, `ru`
 - **lang** (string) (required) - language 2 letters code: `en`, `ru`
-- **start** (int) (optional) - start date: milliseconds
-- **end** (int) (optional) - end date: milliseconds
+- **start** (Date) (optional) - start date
+- **end** (Date) (optional) - end date
+- **timeout** (number) (optional) - request timeout in ms
 
-#### options
+#### types:
 
-[request](https://www.npmjs.com/package/request) options.
-
-Result is an array of ordered holidays parsed by [ical](https://www.npmjs.com/package/ical).
+```ts
+type Holiday = {
+    date: Date
+    name: string
+}
+type Options = {
+    country: string
+    lang: string
+    start?: Date
+    end?: Date
+    timeout?: number
+}
+```
