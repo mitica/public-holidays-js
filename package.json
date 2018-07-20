@@ -25,6 +25,7 @@
   },
   "keywords": [
     "holidays",
+    "holiday",
     "google",
     "calendar"
   ],
@@ -42,7 +43,7 @@
     "@types/got": "^8.3.3",
     "@types/isomorphic-fetch": "0.0.34",
     "@types/node": "latest",
-    "ava": "^0.23.0",
+    "ava": "^0.25.0",
     "rimraf": "^2.6.2",
     "typescript": "latest"
   }
