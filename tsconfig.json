@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
         "module": "commonjs",
-        "outDir": "dist",
+        "outDir": "lib",
         "rootDir": "./src",
         "target": "es6",
         "noImplicitAny": true,
@@ -10,7 +10,7 @@
         "sourceMap": false,
         "moduleResolution": "node",
         "declaration": true,
-        "declarationDir": "types",
+        "declarationDir": "lib",
         "noUnusedLocals": true,
         "noUnusedParameters": true,
         "allowJs": false,

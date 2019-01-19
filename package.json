@@ -2,19 +2,19 @@
   "name": "public-holidays",
   "version": "0.2.1",
   "description": "Public holidays by country. Readonly from google calendar.",
-  "main": "./dist/index.js",
-  "types": "./types/index.d.ts",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "scripts": {
     "pretest": "npm run clean && npm run tsc",
-    "test": "ava --no-cache --verbose dist/**/*.test.js",
+    "test": "ava --no-cache --verbose lib/**/*.test.js",
     "posttest": "npm run clean-test-code",
     "tsc": "tsc",
     "tscw": "tsc -w",
     "preversion": "npm run tsc",
     "postversion": "git push --follow-tags",
     "prepublishOnly": "npm run tsc && npm run clean-test-code",
-    "clean": "rimraf ./dist && rimraf ./types",
-    "clean-test-code": "rimraf ./dist/**/*.test.js && rimraf ./types/**/*.test.d.ts"
+    "clean": "rimraf ./lib",
+    "clean-test-code": "rimraf ./lib/**/*.test.js"
   },
   "engines": {
     "node": ">=4.0.0"
@@ -36,12 +36,9 @@
   },
   "homepage": "https://github.com/Mitica/public-holidays-js#readme",
   "dependencies": {
-    "got": "^8.3.2",
-    "ical": "^0.5.0"
+    "cross-fetch": "^3.0.0"
   },
   "devDependencies": {
-    "@types/got": "^8.3.3",
-    "@types/isomorphic-fetch": "0.0.34",
     "@types/node": "latest",
     "ava": "^0.25.0",
     "rimraf": "^2.6.2",

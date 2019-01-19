@@ -5,7 +5,8 @@
 .DS_Store
 .env*
 node_modules
-npm-debug.log
+*.log
 *.tgz
 dist
 types
+lib
